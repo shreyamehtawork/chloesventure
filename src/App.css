@@ -1,0 +1,86 @@
+:root {
+  --burgundy: #6b0f1a;
+  --tan: #d4bfa5;
+  --cream: #f5f0ea;
+  --white: #ffffff;
+  --translucent: rgba(255, 255, 255, 0.05);
+}
+
+@font-face {
+  font-family: "Rossie";
+  src: url("../public/fonts/Rossesie-nRw1Y.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Erva";
+  src: url("../public/fonts/erva/ErvaEsraDemoSemibold-Rpwle.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blanco";
+  src: url("../public/fonts/blanco/Blanco-vnerO.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Erva";
+  overflow-x: hidden;
+  background-color: black;
+}
+
+/* Fullscreen hero layout */
+.hero-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay */
+.overlay {
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-content {
+  margin-top: auto;
+  margin-bottom: 80px;
+}
+
+.display-6 {
+  font-family: "Rossie";
+  color: var(--cream);
+}
+
+.lead {
+  font-family: "Rossie";
+  font-weight: 900;
+  color: var(--tan);
+}
+
+/* .custom-navbar {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+} */
