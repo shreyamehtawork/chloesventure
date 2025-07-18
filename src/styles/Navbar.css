@@ -5,3 +5,30 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
+
+/* Logo Circle Style */
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #000; /* Use transparent if your logo has its own bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.logo-circle img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Optional: Adjust brand text if needed */
+.brand-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
