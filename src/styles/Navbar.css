@@ -1,34 +1,38 @@
 .custom-navbar {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: black;
   color: white;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  z-index: 2;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo Circle Style */
+/* Logo container */
 .logo-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  height: 100px;
+  width: 55px;
+  border-radius: 0px 0px 200px 200px;
+  background-color: aliceblue;
+  border: 1px solid #1e1e1e;
   overflow: hidden;
-  background-color: #000; /* Use transparent if your logo has its own bg */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid white;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  margin-right: 10px;
+  padding: 10px;
+  padding-top: 25px;
+
+  position: relative;
+  /* top: 15px; */
 }
 
-.logo-circle img {
-  width: 85%;
-  height: auto;
+/* Logo image */
+.oval-logo {
+  display: block;
+  height: 70%;
+  width: auto;
   object-fit: contain;
-}
-
-/* Optional: Adjust brand text if needed */
-.brand-text {
-  font-weight: bold;
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
+  margin: 0;
 }
