@@ -2,7 +2,17 @@ import React, { useEffect, useState, useRef } from "react";
 import "../styles/Countdown.css";
 
 function Countdown() {
-  const targetTimeRef = useRef(new Date(Date.now() + 1020 * 60 * 60 * 1000)); // 1020 hours from now
+  const TARGET_KEY = "crochet_target_time";
+  const defaultTarget = () => {
+    const saved = localStorage.getItem(TARGET_KEY);
+    if (saved) return new Date(saved);
+
+    const newTarget = new Date(Date.now() + 1020 * 60 * 60 * 1000); // 1020 hrs
+    localStorage.setItem(TARGET_KEY, newTarget.toISOString());
+    return newTarget;
+  };
+
+  const targetTimeRef = useRef(defaultTarget());
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   function getTimeLeft() {
