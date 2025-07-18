@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../styles/Countdown.css";
 
 function Countdown() {
+  const targetTimeRef = useRef(new Date(Date.now() + 1020 * 60 * 60 * 1000)); // 1020 hours from now
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   function getTimeLeft() {
     const now = new Date();
-    const tomorrow6pm = new Date();
-    tomorrow6pm.setDate(now.getDate() + 1);
-    tomorrow6pm.setHours(18, 0, 0, 0); // 6:00 PM
-    const diff = tomorrow6pm - now;
+    const diff = targetTimeRef.current - now;
 
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    const totalSeconds = Math.max(0, Math.floor(diff / 1000));
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
 
     return { hours, minutes, seconds };
   }
@@ -28,10 +27,6 @@ function Countdown() {
 
   return (
     <div className="countdown-grid">
-      <div className="countdown-text">
-        <h2>Crocheting down every second</h2>
-      </div>
-
       <div className="luxury-time">
         <div className="time-box">
           <span>{String(timeLeft.hours).padStart(2, "0")}</span>
