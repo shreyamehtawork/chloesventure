@@ -1,0 +1,52 @@
+.countdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: #121212;
+  color: white;
+  font-family: "Rossie";
+}
+
+.countdown-text h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #d4af37; /* Gold tone */
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.luxury-time {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+  color: #fff8dc;
+}
+
+.time-box span {
+  font-size: 3rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px dashed rgba(255, 255, 255, 0.278);
+  backdrop-filter: blur(4px);
+}
+
+.time-box p {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #d4af37;
+  text-transform: uppercase;
+}
