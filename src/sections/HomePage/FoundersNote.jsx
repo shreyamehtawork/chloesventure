@@ -1,8 +1,8 @@
-// import React from "react";
-// // import "../"
+import React from "react";
+// import "../"
 
-// function FounderNote() {
-//   return <h1>Founders Note</h1>;
-// }
+function FounderNote() {
+  return <h1>Founders Note</h1>;
+}
 
-// export default FounderNote;
+export default FounderNote;

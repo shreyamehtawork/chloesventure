@@ -12,7 +12,6 @@ function Hero() {
       </video>
 
       <div className="overlay">
-        <Navbar />
         <div className="hero-content text-center text-white">
           <h1 className="display-6">where Vision meets Elegance</h1>
           <h3 className="lead display-5">Coming Soon!</h3>
